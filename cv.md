@@ -33,6 +33,61 @@ Assistant in the project "Intelligent Search and Forecasting of Litigation"
 - Processing incoming data
 - Markup of court documents(500 documents checked and marked)
 
+### Code Examples
+```
+News.tsx
+const initialState = {
+  loading: true,
+  error: "Success",
+  images: [],
+};
+function reducer(state = initialState, action: Action) {
+  switch (action.type) {
+    case Actions.GET_DATA:
+      return {
+        loading: false,
+        images: action.payload,
+        error: "",
+      };
+    case Actions.NO_DATA:
+      return {
+        loading: false,
+        images: [],
+        error: "404!No data returned!",
+      };
+    default:
+      return state;
+  }
+}
+function Blog() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    axios
+      .get(
+        `${BASE_URL}?q=Часы&pageSize=10&from=2020-12-14&sortBy=popularity&apiKey=${API_KEY}`
+      )
+      .then((response) => {
+        dispatch({ type: Actions.GET_DATA, payload: response.data.articles });
+      })
+      .catch((error) => {
+        dispatch({ type: Actions.NO_DATA, payload: error });
+      });
+  }, []);
+
+  return (
+    <>
+    ...
+ ```
+ 
+### Additional information
+- Completion of Science and English Camp, Kuala Lumpur Malaysia, December 2019
+- Completion of Nazarbayev Intellectual School with Red Certificate
+- Won "Best Delegate" in Model United Nations held by KBTU Student organization
+- Successfully passed IELTS exam and got 6.5/9 (Level B2)
+- Participation in volunteer programs KBTU Day Almaty 2020, Creative Spark Higher Education Enterprise Program
+
+
 **Digitalization office** *(Jun. 2020 -Aug. 2020)*   
 Intern in the project "Inventory of information systems and audit of information security" Almaty, Kazakhstan 
 - Introduction of advice on filling out questionnaires on the inventory of information systems: IP Survey,
