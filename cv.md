@@ -33,6 +33,32 @@ Assistant in the project "Intelligent Search and Forecasting of Litigation"
 - Processing incoming data
 - Markup of court documents(500 documents checked and marked)
 
+**Digitalization office** *(Jun. 2020 -Aug. 2020)*   
+Intern in the project "Inventory of information systems and audit of information security" Almaty, Kazakhstan 
+- Introduction of advice on filling out questionnaires on the inventory of information systems: IP Survey,
+- Defnition of data objects stored in information systems, Inspection of the Customer's IT infrastructure;
+
+### University Projects
+**Intranet - Student Management System**
+- Creation of Intranet - Student Management System which concludes student/teacher actions as grading,
+receiving marks, checking attendance etc.
+- Used Java programming language and principles of OOP
+- MySQL was used to store the entities
+
+**Online-Shop**
+- Creation of web application for customers to shop and purchase products online. The site includes selecting
+products, search by categories, adding to cart selected products, see details etc.
+- MySQL selected to store user data
+- The front-end of project written in Angular Js, back-end by Django REST Framework
+
+
+**Online-Shop2**
+- Creation of web application for customers to shop and purchase products online. The site includes selecting
+products, adding to cart selected products, added image gallery, search by queries, details of products.
+- The project is written in React TS, backend is not developed.
+- Used Context API, Redux, Axios, React hooks etc. in project.
+Link: * [https://github.com/Aigerim22/REACT] (private)
+
 ### Code Examples
 ```
 News.tsx
@@ -86,30 +112,3 @@ function Blog() {
 - Won "Best Delegate" in Model United Nations held by KBTU Student organization
 - Successfully passed IELTS exam and got 6.5/9 (Level B2)
 - Participation in volunteer programs KBTU Day Almaty 2020, Creative Spark Higher Education Enterprise Program
-
-
-**Digitalization office** *(Jun. 2020 -Aug. 2020)*   
-Intern in the project "Inventory of information systems and audit of information security" Almaty, Kazakhstan 
-- Introduction of advice on filling out questionnaires on the inventory of information systems: IP Survey,
-- Defnition of data objects stored in information systems, Inspection of the Customer's IT infrastructure;
-
-### University Projects
-**Intranet - Student Management System**
-- Creation of Intranet - Student Management System which concludes student/teacher actions as grading,
-receiving marks, checking attendance etc.
-- Used Java programming language and principles of OOP
-- MySQL was used to store the entities
-
-**Online-Shop**
-- Creation of web application for customers to shop and purchase products online. The site includes selecting
-products, search by categories, adding to cart selected products, see details etc.
-- MySQL selected to store user data
-- The front-end of project written in Angular Js, back-end by Django REST Framework
-
-
-**Online-Shop2**
-- Creation of web application for customers to shop and purchase products online. The site includes selecting
-products, adding to cart selected products, added image gallery, search by queries, details of products.
-- The project is written in React TS, backend is not developed.
-- Used Context API, Redux, Axios, React hooks etc. in project.
-Link: * [https://github.com/Aigerim22/REACT] (private)
