@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CV</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+       <link rel="shortcut icon" href="" /> 
+    </head>
+<body>
+<div id = "main">
+<header>
+    <h1 class = "name">AIGERIM TAZHIBAY</h1>
+</header>
+    <p>Major: <span>Information Systems</span><br>
+    Goal: <span>Learn Web Development and to become competent Frontend Developer!</span></p>
+    <div class = "container">
+        <div>
+    <h2>Contacts</h2>
+    <p>Email: aika0822t@gmail.com<br>
+    Phone: +7(771) 335 07 76<br>
+    Github: github.com/Aigerim22</p>
+</div>
+<div>
+    <img src = "https://sun9-22.userapi.com/impg/c853520/v853520178/2089a2/d_5aDYptUls.jpg?size=200x0&quality=88&crop=162,162,1296,1296&sign=fa537ee94c9e3c511ef694fa458db214&c_uniq_tag=EOifDKs4-jeDTGrS22TbvEpFskSfPQLLjCQcYa06h-E&ava=1">
+</div>
+    </div>
+
+    <h2>Education</h2>
+    <p> Nazarbayev Intellectual School <span>(Taraz, Kazakhstan (Aug. 2013 - May 2018))</span>
+    <ul>
+        <li>
+            Major: Physics & Chemistry
+        </li>
+    </ul>
+    Kazakh-British Technical University <span>(Almaty, Kazakhstan Aug.18-Expected Jun.2021)</span>
+    <ul>
+        <li>
+            B.S. in Information Systems, GPA: 3.64/4.0
+        </li>
+    </ul>
+    </p>
+    <h2>Personal/Soft Skills</h2>
+    <ul>
+        <li>
+            Active listening skills: note-taking, organization, punctuality;
+        </li>
+        <li>
+            Interpersonal skills: adaptability, teamwork;
+        </li>
+        <li>
+            Willingness to learn;
+        </li>
+    </ul>
+<h2>Technical Skills</h2>
+<p><span id= "bold">Programming Languages:</span> C++,C#, Java, Python, Javascript, Typescript, HTML/CSS<br>
+<span id= "bold">Databases:</span>SQL, MySQL, PostgreSQL, SQLite<br>
+<span id= "bold">Frameworks:</span> Angular, React, Django<br>
+<span id= "bold">IDE's:</span>Visual Studio, Visual Studio Code, Eclipse, PyCharm, JetBrains DataGrip</p>
+<h2>Work Experience</h2>
+<p> I don't have an work experience, but I'm ready to learn and gain knowledge!</p>
+<h3>Experience (internships)</h3>
+
+<p>
+<span id = "bold">Kazakh-British Technical University </span> 
+<span>(Almaty, Kazakhstan (May. 2019 - August.2019)</span>
+<br>
+Assistant in the project "Intelligent Search and Forecasting of Litigation"
+<ul>
+    <li>
+        Processing incoming data
+    </li>
+    <li>
+        Markup of court documents(500 documents checked and marked)
+    </li>
+</ul>
+</p>
+<p>
+    <span id = "bold">Digitalization office </span> <span>(Jun. 2020 -Aug. 2020)</span><br>
+    Intern in the project "Inventory of information systems and audit of information security" Almaty, Kazakhstan
+    <ul>
+        <li>
+            Introduction of advice on filling out questionnaires on the inventory of information systems: IP Survey,
+        </li>
+        <li>
+            Defnition of data objects stored in information systems, Inspection of the Customer's IT infrastructure;
+        </li>
+    </ul>
+    </p>
+<h2>University Projects</h2>
+<p id = "bold">Intranet - Student Management System
+    <ul>
+        <li>
+            Creation of Intranet - Student Management System which concludes student/teacher actions as grading, receiving marks, checking attendance etc.
+        </li>
+        <li>
+            Used Java programming language and principles of OOP
+        </li>
+        <li>
+            MySQL was used to store the entities
+
+        </li>
+    </ul>
+</p>
+<p id = "bold">Online-Shop
+    <ul>
+        <li>
+            Creation of web application for customers to shop and purchase products online. The site includes selecting products, search by categories, adding to cart selected products, see details etc.
+        </li>
+        <li>
+            MySQL selected to store user data
+        </li>
+        <li>
+            The front-end of project written in Angular Js, back-end by Django REST Framework
+        </li>
+    </ul>
+</p>
+<p id = "bold">Online-Shop2
+    <ul>
+        <li>
+            Creation of web application for customers to shop and purchase products online. The site includes selecting products, adding to cart selected products, added image gallery, search by queries, details of products.
+        </li>
+        <li>
+            The project is written in React TS, backend is not developed.
+        </li>
+        <li>
+            Used Context API, Redux, Axios, React hooks etc. in project. <br>
+            Link: https://github.com/Aigerim22/REACT (private)
+        </li>
+    </ul>
+</p>
+<h2>Code Examples</h2>
+<code>
+<p>News.tsx <br>
+const initialState = {<br>
+  loading: true,<br>
+  error: "Success",<br>
+  images: [],<br>
+};<br>
+function reducer(state = initialState, action: Action) {<br>
+  switch (action.type) {<br>
+    case Actions.GET_DATA:<br>
+      return {<br>
+        loading: false,<br>
+        images: action.payload,<br>
+        error: "",<br>
+      };<br>
+    case Actions.NO_DATA:<br>
+      return {<br>
+        loading: false,<br>
+        images: [],<br>
+        error: "404!No data returned!",<br>
+      };<br>
+    default:<br>
+      return state;<br>
+  }<br>
+}<br>
+function Blog() {<br>
+  const [state, dispatch] = useReducer(reducer, initialState);<br>
+
+  useEffect(() => {<br>
+    axios<br>
+      .get(<br>
+        `${BASE_URL}?q=Часы&pageSize=10&from=2020-12-14&sortBy=popularity&apiKey=${API_KEY}`
+      )<br>
+      .then((response) => {<br>
+        dispatch({ type: Actions.GET_DATA, payload: response.data.articles });
+      })<br>
+      .catch((error) => {<br>
+        dispatch({ type: Actions.NO_DATA, payload: error });
+      });<br>
+  }, []);<br>
+
+  return (<br>
+    <><br>
+    ...<br>
+    </p>
+</code>
+<h2>Additional information</h2>
+<p>
+    <ul>
+        <li>
+            Completion of Science and English Camp, Kuala Lumpur Malaysia, December 2019
+        </li>
+        <li>
+            Completion of Nazarbayev Intellectual School with Red Certificate
+        </li>
+        <li>
+            Won "Best Delegate" in Model United Nations held by KBTU Student organization
+        </li>
+        <li>
+            Successfully passed IELTS exam and got 6.5/9 (Level B2)
+        </li>
+        <li>
+            Participation in volunteer programs KBTU Day Almaty 2020, Creative Spark Higher Education Enterprise Program
+        </li>
+    </ul>
+</p><br>
+</div>
+</body>
