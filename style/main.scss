@@ -1,0 +1,85 @@
+$primary-color:rgb(133, 58, 133);
+$secondary-color: black;
+
+html{
+font-family: Roboto, sans-serif;
+}
+
+*{
+    color: $secondary-color;
+}
+h1{
+    color:$primary-color;
+    margin-bottom: 0.25em;
+}
+h2{
+    color: $secondary-color;
+    font-size: 0.7em;
+    margin-top:0;
+    margin-bottom: 1em;
+}
+a{
+    color: $primary-color;
+}
+.wrapper{
+    display: flex;
+    margin-left: 400px;
+    margin-bottom: 1em;
+    flex-wrap: wrap-reverse;
+    // justify-content: space-between;
+    &__contacts1{
+        margin-right: 10px;
+    }
+}
+
+.container{
+ display: flex;
+ margin-bottom: -4em;
+ flex-wrap: wrap;
+}
+h3{
+    color:$primary-color
+}
+.cv{
+    max-width: 900px;
+    margin: 0px auto;
+}
+.experience{
+    display: flex;
+    margin-bottom: 2.5em;
+    // flex-wrap: wrap;
+    &__date{
+        min-width: 400px;
+        margin-bottom: 0em;
+
+    }
+    &__name{
+        font-weight: bold;
+    }
+}
+
+.main{
+    display: flex;
+    // margin-bottom: 2em;
+    
+    &__img {
+        min-width: 400px;
+        margin-bottom: 1em;
+    }
+    &__name{
+        font-weight: bold;
+        margin-top: 30px;
+        font-size: 24px;
+        
+    }
+}
+img{
+	width: 200px;
+	height: 200px;
+}
+span{
+    font-style: italic;
+}
+.goal{
+    font-size: 14px;
+}
